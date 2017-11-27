@@ -1,0 +1,18 @@
+How To migrate
+1) To activate the environment: env\scripts\activate
+2) python manage.py makemigrations app
+3) python manage.py sqlmigrate app 0001
+4) python manage.py migrate
+
+To test a new table
+1) python manage.py shell
+2) from books.models import Book (books.models is the app / Book is the class)
+3) Book.objects.all
+4) a = Book()
+5) a.name = "Life"
+6) a.save()
+
+Super User
+1) python manage.py createsuperuser
+2) username = paulo
+3) password = 123python
